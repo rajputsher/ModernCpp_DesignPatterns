@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/SingleResponsibilityPrinciple/main.cpp
+iostream
+-
+cstdio
+-
+string
+-
+vector
+-
+fstream
+-
+boost/lexical_cast.hpp
+-
+
