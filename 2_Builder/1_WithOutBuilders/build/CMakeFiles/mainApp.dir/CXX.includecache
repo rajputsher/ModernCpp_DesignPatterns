@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/1_WithOutBuilders/main.cpp
+iostream
+-
+cstdio
+-
+string
+-
+vector
+-
+fstream
+-
+tuple
+-
+sstream
+-
+memory
+-
+

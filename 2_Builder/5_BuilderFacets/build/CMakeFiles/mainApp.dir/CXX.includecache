@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/Person.cpp
+Person.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/Person.hpp
+PersonBuilder.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonBuilder.hpp
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/Person.hpp
+string
+-
+iostream
+-
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonAddressBuilder.hpp
+string
+-
+PersonBuilder.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonBuilder.hpp
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonBuilder.cpp
+PersonBuilder.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonBuilder.hpp
+PersonAddressBuilder.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonAddressBuilder.hpp
+PersonJobBuilder.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonJobBuilder.hpp
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonBuilder.hpp
+Person.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/Person.hpp
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonJobBuilder.hpp
+PersonBuilder.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/5_BuilderFacets/PersonBuilder.hpp
+

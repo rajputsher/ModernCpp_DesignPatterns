@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/6_Assignment/codeBuilder.cpp
+string
+-
+vector
+-
+iostream
+-
+ostream
+-
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/2_Builder/6_Assignment/main.cpp
+string
+-
+vector
+-
+iostream
+-
+ostream
+-
+
