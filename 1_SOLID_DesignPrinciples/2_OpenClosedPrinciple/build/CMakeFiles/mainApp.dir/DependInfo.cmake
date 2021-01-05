@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/SingleResponsibilityPrinciple/main.cpp" "/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/SingleResponsibilityPrinciple/build/CMakeFiles/mainApp.dir/main.cpp.o"
+  "/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/2_OpenClosedPrinciple/main.cpp" "/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/2_OpenClosedPrinciple/build/CMakeFiles/mainApp.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

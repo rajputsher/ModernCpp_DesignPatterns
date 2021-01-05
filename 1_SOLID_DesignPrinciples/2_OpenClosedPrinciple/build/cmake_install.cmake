@@ -1,4 +1,4 @@
-# Install script for directory: /home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/SingleResponsibilityPrinciple
+# Install script for directory: /home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/2_OpenClosedPrinciple
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/SingleResponsibilityPrinciple/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/2_OpenClosedPrinciple/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

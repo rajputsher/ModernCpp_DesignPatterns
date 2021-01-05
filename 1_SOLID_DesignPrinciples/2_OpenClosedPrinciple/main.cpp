@@ -8,59 +8,159 @@
 using namespace std;
 using namespace boost;
 
-struct Journal
+enum class Color {red, green, blue};
+enum class Size {small, medium, large};
+
+struct Product
 {
-    string title;
-    vector<string> entries;
-
-    Journal(const string &title): title(title) {} //constructor
-
-    void add_entry(const string& entry)
-    {
-        static int count =1;
-        entries.push_back(lexical_cast<string>(count++) + ": "+ entry);
-    }
-
-    /*Not a good idea to add the save operation in the same class
-    as someday we might want to save this in a database Better add it in a seperate class
-    */
-    /*
-    void save(const string& filename)
-    {
-        ofstream ofs(filename);
-        for (auto& e: entries)
-        {
-            ofs << e << endl;
-        }
-    }
-    */
+    string name;
+    Color color;
+    Size size;
 };
 
-//By have a sepearte part for Managing persistence we can have each class its own reposibilities
-// by doing this we seperate the concerns that might arise due to that
-struct PersistenceManager{
+//Here we can see that for each new criteria we are repeating the code and this is not a scalable approach
+//As the criteria to filter by increases the number of funcitons increases.
+struct ProductFilter
+{
+    //The following method filters the input items by color and ouputs the products(pointer to products)
+    vector<Product*> by_color(vector<Product*> items, Color color){
+        vector<Product*> result;
+        for(auto& i: items)
+            if(i->color == color)
+                result.push_back(i);
+        return result;
+    }
 
-    static void save(const Journal& j , const string& filename)
+    //Filter by Size
+    vector<Product*> by_size(vector<Product*> items, Size size){
+        vector<Product*> result;
+        for(auto& i: items)
+            if(i->size == size)
+                result.push_back(i);
+        return result;
+    }
+
+    //Filter by Size and Color
+    vector<Product*> by_size_and_color(vector<Product*> items, Size size,Color color){
+        vector<Product*> result;
+        for(auto& i: items)
+            if(i->size == size && i->color == color)
+                result.push_back(i);
+        return result;
+    }
+};
+
+template <typename T> 
+struct Specification
+{
+     virtual ~Specification() = default;
+     virtual bool is_satisfied(T* item) const = 0;
+};
+
+template <typename T> 
+struct Filter
+{
+    virtual vector<T*> filter(vector<T*> items, 
+                             Specification<T>& spec) = 0;
+};
+
+struct BetterFilter:Filter<Product>
+{
+    vector<Product *> filter(vector<Product *> items,
+                            Specification<Product> &spec) override
     {
-        ofstream ofs(filename);
-        for (auto& e: j.entries)
-        {
-            ofs << e << endl;
-        }
+        vector<Product*> result;
+        for (auto& item:items)
+            if(spec.is_satisfied(item))
+                result.push_back(item);
+        return result;
+    }
+
+};
+
+struct ColorSpecification: Specification<Product>
+{
+    Color color;
+
+    ColorSpecification(Color color): color(color){}
+
+    bool is_satisfied(Product *item) const override {
+        return item->color == color;
+    }
+};
+
+struct SizeSpecification: Specification<Product>
+{
+    Size size;
+
+    explicit SizeSpecification(const Size size):size{size}
+    {
+
+    }
+    bool is_satisfied(Product* item) const override{
+        return item->size == size;
+    }
+};
+
+template <typename T> struct AndSpecification;
+
+// new: 
+template <typename T> 
+AndSpecification<T> operator&&
+  (const Specification<T>& first, const Specification<T>& second)
+{
+  return { first, second };
+}
+
+//Combinator Specification
+template <typename T>
+struct AndSpecification: Specification<T> //Andspecification inherits from Specification
+{
+    //Take the arguments of left and right then combine it
+    const Specification<T>& first;
+    const Specification<T>& second;
+
+    AndSpecification(const Specification<T> &first,const Specification<T> &second):first(first),second(second)
+    {
+
+    }
+    bool is_satisfied(T *item) const override
+    {
+        return first.is_satisfied(item) && second.is_satisfied(item);
     }
 };
 
 int main()
 {
-    Journal journal{"My Diary 2021"};
-    journal.add_entry("I completed a course");
-    journal.add_entry("I read a book");
+    Product apple{"Apple",Color::green,Size::small};
+    Product tree{"Tree",Color::green,Size::large};
+    Product house{"House", Color::blue, Size::large};
 
-    //journal.save("my_diary_2021.txt");
+    const vector<Product*> items {&apple, &tree, &house};
 
-    PersistenceManager pm;
-    pm.save(journal, "my_diary_2021.txt");
+    /* Need not repeat this for each filter
+    ProductFilter pf;
 
-    getchar();
-    return 0;
+    auto green_things = pf.by_color(items, Color::green);
+    for(auto& item: green_things)
+        cout<< item->name << "is green\n";
+    */
+
+   BetterFilter bf;
+   ColorSpecification green(Color::green);
+   
+   for(auto& item: bf.filter(items, green) )
+      {
+        cout<< item->name << " is green\n";
+      }  
+
+   SizeSpecification large(Size::large);
+   AndSpecification<Product> green_and_large(green,large); 
+
+   for(auto& item: bf.filter(items, green_and_large))
+   {
+       cout<< item->name << " is green and large\n";
+   }
+   
+   return 0;
 }

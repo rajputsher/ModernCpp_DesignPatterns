@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/SingleResponsibilityPrinciple/main.cpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/1_SOLID_DesignPrinciples/2_OpenClosedPrinciple/main.cpp
 iostream
 -
 cstdio
