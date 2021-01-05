@@ -88,5 +88,14 @@ int main()
 }
 ```
 
+Example:-)
+
+Just because you can, doesn’t mean you should.
+
+<img src='SRP.jpg' width=300 height=300> 
+
+
+---
+
 ## References
 1. [Stackify](https://stackify.com/solid-design-principles/)

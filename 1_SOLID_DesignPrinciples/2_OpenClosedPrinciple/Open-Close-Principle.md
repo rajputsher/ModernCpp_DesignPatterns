@@ -11,6 +11,13 @@ That’s why Robert C. Martin and others redefined the Open/Closed Principle to 
 The main benefit of this approach is that an interface introduces an additional level of abstraction which enables loose coupling. The implementations of an interface are independent of each other and don’t need to share any code. If we consider it beneficial that two implementations of an interface share some code, we can either use inheritance or composition.
 
 
+Example :-)
+
+Open chest surgery is not needed when putting on a coat.
+
+<img src='OCP.jpg' width =300 height=300>
+
+
 ## References
 
 1. [Stackify](https://stackify.com/solid-design-open-closed-principle/)

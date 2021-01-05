@@ -114,3 +114,9 @@ struct Machine:IMachine
 
 };
 ```
+
+Example :-)
+
+You want me to plug this in, where?
+
+<img src='ISP.jpg' width=300 height=300> 
