@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/5_Singleton/5_Multiton/main.cpp
+map
+-
+memory
+-
+iostream
+-
+
