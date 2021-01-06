@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/5_Singleton/2_TestabilityIssues/main.cpp
+iostream
+-
+cstdio
+-
+string
+-
+vector
+-
+fstream
+-
+tuple
+-
+sstream
+-
+memory
+-
+cmath
+-
+map
+-
+boost/lexical_cast.hpp
+-
+gtest/gtest.h
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/5_Singleton/2_TestabilityIssues/gtest/gtest.h
+

@@ -1,0 +1,20 @@
+Delhi
+671209400
+New York
+1243434
+Sao Paulo
+3622264
+Seoul
+1234000
+Bangalore
+560000000
+Berlin
+456000
+Stockholm
+48700
+Jakarta
+89400000
+Osaka
+66600000
+Tokyo
+89900000

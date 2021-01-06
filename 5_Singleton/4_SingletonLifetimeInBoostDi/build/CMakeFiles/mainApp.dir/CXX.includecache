@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/5_Singleton/4_SingletonLifetimeInBoostDi/di.hpp
+__config
+-
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/5_Singleton/4_SingletonLifetimeInBoostDi/main.cpp
+di.hpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/5_Singleton/4_SingletonLifetimeInBoostDi/di.hpp
+cstdio
+-
+iostream
+-
+memory
+-
+
