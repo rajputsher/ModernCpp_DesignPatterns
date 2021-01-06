@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/5_PrototypeAssignment/Prototype.cpp
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/5_PrototypeAssignment/main.cpp
+gtest/gtest.h
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/5_PrototypeAssignment/gtest/gtest.h
+Prototype.cpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/5_PrototypeAssignment/Prototype.cpp
+

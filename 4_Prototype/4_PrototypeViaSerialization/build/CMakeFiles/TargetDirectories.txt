@@ -1,0 +1,3 @@
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/4_PrototypeViaSerialization/build/CMakeFiles/rebuild_cache.dir
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/4_PrototypeViaSerialization/build/CMakeFiles/edit_cache.dir
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/4_Prototype/4_PrototypeViaSerialization/build/CMakeFiles/mainApp.dir

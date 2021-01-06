@@ -1,0 +1,83 @@
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <cstdio>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <tuple>
+#include <sstream>
+#include <memory>
+#include <cmath>
+using namespace std;
+
+struct Address
+{
+  string street,city;
+  int suite;
+
+  //Constructor
+  Address(const string& street, const string &city, int suite): 
+          street(street), city(city), suite(suite)
+          {
+
+          }
+  friend ostream &operator<<(ostream &os, const Address &address)
+  {
+    os << "street: "<< address.street << " city: " << address.city
+      <<" suite: " << address.suite;
+    return os;
+  }
+
+};
+
+struct Contact 
+{
+  string name;
+
+  // Initially
+  // Address address;
+
+  Address* address; //Make addresspointer instead of a reference
+  //Contact(); // default contructor
+
+  //Constructor initially
+  // Contact(const string &name, const Address &address):
+  //   name(name), address(address)
+  //   {
+
+  //   }
+  Contact(const string &name,  Address *address):
+    name(name), address(address)
+    {
+
+    }  
+  friend ostream &operator<<(ostream &os, const Contact &contact)
+  {
+    os << " Name: " << contact.name << " Address: " << *contact.address;
+    return os;
+  }
+};
+
+int main()
+{
+  // Contact sherlock{"Sherlock holmes",  Address{"221b baker street","London",006}};
+  Contact sherlock{"Sherlock holmes", new Address{"221b baker street","London",006}};
+
+  //Contact james{"James Bond", Address{"221a baker street","London",007}};
+  //Alternate way of doing the same
+
+  // Contact james=sherlock; 
+  // james.name = "James Bond";
+  // james.address.suite= 007;
+  // james.address.street="221a baker street";
+  // james.address.city="London";
+
+  Contact james = sherlock; // Here is where the problem begins, this does not do a deep copy
+  james.name= "James Bond";
+  james.address->suite = 007; // This will not only change for james but also it will change to 007 for sherlock
+  // This is because whe we did Contact james = sherlock; the adrress pointer was also copied to james and we are modifying the both addresses.
+  cout << sherlock <<james<<endl; // This will print same address for both James and sherlock.
+  //To avoid this we need Prototype pattern
+
+  return 0;
+}
