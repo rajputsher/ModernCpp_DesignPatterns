@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/3_Factories/7_FactoryAssignmnet/PersonFactory.cpp
+string
+-
+iostream
+-
+
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/3_Factories/7_FactoryAssignmnet/main.cpp
+string
+-
+iostream
+-
+PersonFactory.cpp
+/home/shivsayali/Shivaram/onlineCourses/ModernCpp_DesignPatterns/3_Factories/7_FactoryAssignmnet/PersonFactory.cpp
+

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/mainApp.dir/main.cpp.o CMakeFiles/mainApp.dir/PersonFactory.cpp.o  -o mainApp 
